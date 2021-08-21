@@ -1213,10 +1213,16 @@
             });
             $(document).trigger('metaslider/initialized', '#metaslider_2449');
         };
-        var timer_metaslider_2449 = function () {
-            var slider = !window.jQuery ? window.setTimeout(timer_metaslider_2449, 100) : !jQuery.isReady ? window.setTimeout(timer_metaslider_2449, 1) : metaslider_2449(window.jQuery);
-        };
-        timer_metaslider_2449();
+        let i = 0
+        // var timer_metaslider_2449 = function () {
+        //     var slider = !window.jQuery ? window.setTimeout(timer_metaslider_2449, 10000) : !jQuery.isReady ? window.setTimeout(timer_metaslider_2449, 10000) : metaslider_2449(window.jQuery);
+        // };
+        // timer_metaslider_2449();
+        setTimeout(function x() {
+            console.log(i++ + " ");
+            metaslider_2449(window.jQuery)
+            if (i < 10) setTimeout(x, 1000);
+        }, 1000);
     </script>
     <div style="display:none;">
         <script type="text/javascript">
