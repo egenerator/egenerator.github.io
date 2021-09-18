@@ -29,7 +29,8 @@
             }
             return false;
         }
-        if (isMobile())
+        console.log(window.location.host + '/m/' + window.location.pathname)
+        if (isMobile()) window.location = window.location.host + '/m/' + window.location.pathname
     </script>
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0,user-scalable=0" />
@@ -1188,8 +1189,8 @@
         }
     </style>
     <script type='text/javascript'>
-            /* <![CDATA[ */
-            var wpcf7 = { "apiSettings": { "root": "http:\/\/cn.power-sprayer.com\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
+        /* <![CDATA[ */
+        var wpcf7 = { "apiSettings": { "root": "http:\/\/cn.power-sprayer.com\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
 /* ]]> */
     </script>
     <script type='text/javascript' src="wp-content/plugins/contact-form-7/includes/js/scripts.js-ver=5.1.3"></script>
