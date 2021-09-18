@@ -1,10 +1,13 @@
 @font-face {
-  font-family: 'HelveticaNeueLTPro-Roman';
-  src: url("../fonts/HelveticaNeueLTPro-Roman.ttf")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/fonts/HelveticaNeueLTPro-Roman.ttf*/ format('truetype');
+  font-family: "HelveticaNeueLTPro-Roman";
+  src: url("../fonts/HelveticaNeueLTPro-Roman.ttf")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/fonts/HelveticaNeueLTPro-Roman.ttf*/
+    format("truetype");
 }
 body {
   overflow-x: hidden;
-  font-family: 'HelveticaNeueLTPro-Roman', Arial, 'Microsoft YaHei', SimSun, Sans-serif !important;
+  font-family: "HelveticaNeueLTPro-Roman", Arial, "Microsoft YaHei", SimSun,
+    Sans-serif !important;
 }
 li {
   list-style: none;
@@ -68,20 +71,20 @@ a:active {
   text-decoration: none;
 }
 .fm_os {
-  font-family: 'open sans';
+  font-family: "open sans";
   font-weight: 600;
 }
 .no-mr {
-  margin-right: 0!important;
+  margin-right: 0 !important;
 }
 .no-mb {
-  margin-bottom: 0!important;
+  margin-bottom: 0 !important;
 }
 .no-pr {
-  padding-right: 0!important;
+  padding-right: 0 !important;
 }
 .no-pb {
-  padding-bottom: 0!important;
+  padding-bottom: 0 !important;
 }
 .mt10 {
   margin-top: 10px;
@@ -173,11 +176,16 @@ a:active {
   -o-transition: 1s ease;
 }
 .img-box:hover img {
-  transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0) rotateY(0);
-  -webkit-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0) rotateY(0);
-  -moz-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0) rotateY(0);
-  -ms-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0) rotateY(0);
-  -o-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0) rotateY(0);
+  transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0)
+    rotateY(0);
+  -webkit-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0)
+    rotateX(0) rotateY(0);
+  -moz-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0)
+    rotateX(0) rotateY(0);
+  -ms-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0)
+    rotateY(0);
+  -o-transform: translate(0, 0) rotate(0) scale(1.1, 1.1) skew(0, 0) rotateX(0)
+    rotateY(0);
 }
 .scroll-box {
   overflow: hidden;
@@ -254,7 +262,9 @@ a:active {
 #header .search-box form input[type="submit"] {
   width: 22px;
   height: 22px;
-  background: url("../images/tc-zoom.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/tc-zoom.png*/ no-repeat;
+  background: url("../images/tc-zoom.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/tc-zoom.png*/
+    no-repeat;
   position: absolute;
   right: 15px;
   top: 5px;
@@ -266,7 +276,9 @@ a:active {
 #header .search-box .close {
   width: 15px;
   height: 15px;
-  background: url("../images/close.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/close.png*/ no-repeat;
+  background: url("../images/close.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/close.png*/
+    no-repeat;
   background-size: 100%;
   position: absolute;
   right: 15px;
@@ -291,7 +303,9 @@ a:active {
   top: 1px;
   width: 18px;
   height: 18px;
-  background: url("../images/side-close.jpg")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/side-close.jpg*/ no-repeat center;
+  background: url("../images/side-close.jpg")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/side-close.jpg*/
+    no-repeat center;
   background-size: 100%;
 }
 #header .side-menu .list li {
@@ -300,11 +314,14 @@ a:active {
   position: relative;
 }
 #header .side-menu .list li.hassub {
-  background: url("../images/jia.jpg")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/jia.jpg*/ no-repeat right 16px;
+  background: url("../images/jia.jpg")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/jia.jpg*/
+    no-repeat right 16px;
   background-size: 10px;
 }
 #header .side-menu .list li.hassub.active {
-  background-image: url("../images/jian.jpg")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/jian.jpg*/;
+  background-image: url("../images/jian.jpg")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/jian.jpg*/;
 }
 #header .side-menu .list li a {
   color: #303030;
@@ -373,7 +390,7 @@ a:active {
   position: relative;
 }
 #index-body .i-tit:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -414,7 +431,9 @@ a:active {
   padding-top: 50px;
   overflow: hidden;
   height: 219px;
-  background: url("../images/i-mes-bg.jpg")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/i-mes-bg.jpg*/ no-repeat center;
+  background: url("../images/i-mes-bg.jpg")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/i-mes-bg.jpg*/
+    no-repeat center;
   background-size: cover;
 }
 #index-body .i-message .box {
@@ -459,11 +478,13 @@ a:active {
 }
 #index-body .i-product .box .arr.arr-l {
   left: 14px;
-  background-image: url("../images/i-pro-arr-l.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/i-pro-arr-l.png*/;
+  background-image: url("../images/i-pro-arr-l.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/i-pro-arr-l.png*/;
 }
 #index-body .i-product .box .arr.arr-r {
   right: 14px;
-  background-image: url("../images/i-pro-arr-r.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/i-pro-arr-r.png*/;
+  background-image: url("../images/i-pro-arr-r.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/i-pro-arr-r.png*/;
 }
 #index-body .i-product .box .list-box {
   margin-top: 28px;
@@ -613,7 +634,7 @@ a:active {
   position: relative;
 }
 .inner-page.about-page .con .a-tit:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -637,7 +658,7 @@ a:active {
   width: 48.5%;
   margin-bottom: 26px;
 }
-.inner-page.product-page .con .pro-list li .img-box{
+.inner-page.product-page .con .pro-list li .img-box {
   border: 1px solid #ccc;
 }
 .inner-page.product-page .con .pro-list li .tit a {
@@ -691,7 +712,7 @@ a:active {
   position: relative;
 }
 .inner-page.prodet-page .con .prodet-form .tit:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -776,7 +797,7 @@ a:active {
   position: relative;
 }
 .inner-page.contact-page .con .c-form .tit:after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -799,15 +820,18 @@ a:active {
   float: left;
   width: 49%;
   height: 30px;
-  background: #948d88 url("../images/prodet-arr-l.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/prodet-arr-l.png*/ no-repeat center;
+  background: #948d88 url("../images/prodet-arr-l.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/prodet-arr-l.png*/
+    no-repeat center;
   background-size: 25px;
 }
-.inner-page .fy-box span a{
+.inner-page .fy-box span a {
   display: block;
   height: 30px;
 }
 .inner-page .fy-box span:last-child {
-  background-image: url("../images/prodet-arr-r.png")/*tpa=http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/prodet-arr-r.png*/;
+  background-image: url("../images/prodet-arr-r.png")
+    /*tpa=https://egenerator.github.io/wp-content/themes/wenxinjidian-cn-m/images/prodet-arr-r.png*/;
   float: right;
 }
 .inner-page .page-box {
@@ -832,12 +856,12 @@ a:active {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 }
-div.wpcf7 img.ajax-loader{
+div.wpcf7 img.ajax-loader {
   width: auto;
 }
 
 .intro table {
-    display: block;
-    width: 100%;
-    overflow-x: scroll;
+  display: block;
+  width: 100%;
+  overflow-x: scroll;
 }
