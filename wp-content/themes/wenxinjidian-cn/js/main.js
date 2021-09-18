@@ -24,7 +24,7 @@ function isMobile() {
     return false;
 }
 console.log(window.location.host + '/m' + window.location.pathname)
-if (isMobile()) { window.location = window.location.host + '/m' + window.location.pathname }
+if (isMobile()) { window.location = window.location.protocol + '//' + window.location.host + '/m' + window.location.pathname }
 ; $(function () {
 
     //wow.js扩展
