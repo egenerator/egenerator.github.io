@@ -24,10 +24,10 @@ function isMobile() {
     return false;
 };
 console.log(window.location);
-// setTimeout(() => {
-// if (isMobile()) { window.location = window.location.protocol + '//' + window.location.host + '/m' + window.location.pathname }
-// }, 4000)
-; $(function () {
+setTimeout(() => {
+    if (isMobile()) { window.location = window.location.origin + '/m' + window.location.pathname }
+}, 4000);
+$(function () {
 
     //wow.js扩展
     $('.animate-father').filter(function () {
