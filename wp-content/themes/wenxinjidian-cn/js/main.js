@@ -192,7 +192,7 @@ $(function () {
 
         }
 
-        $('http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn/js/.navigateli .fa').removeClass('fa-chevron-up').addClass('fa-chevron-down');
+        $('https://egenerator.github.io/wp-content/themes/wenxinjidian-cn/js/.navigateli .fa').removeClass('fa-chevron-up').addClass('fa-chevron-down');
 
     });
 

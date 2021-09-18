@@ -39,7 +39,7 @@ $(function () {
     $(window).scroll(function () {
         var sT = $(document).scrollTop();
         if (sT > 200) {
-            //$('http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn/js/.i-about .top').addClass('animated').addClass('fadeInUp');
+            //$('https://egenerator.github.io/wp-content/themes/wenxinjidian-cn/js/.i-about .top').addClass('animated').addClass('fadeInUp');
         }
         if (sT > 1450) {
             if (numBtn) {
