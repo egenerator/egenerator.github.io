@@ -60,7 +60,6 @@ $(function () {
     });
     $('.layer-form .wpcf7-form').addClass('contact100-form');
 
-    //鏉堣鐖惄绋垮彠閺佸牊鐏�
     $('.sideBar .cat-list a').filter(function () {
         if ($(this).html() == $('.bread-crumbs span').html()) {
             $(this).addClass('active');
