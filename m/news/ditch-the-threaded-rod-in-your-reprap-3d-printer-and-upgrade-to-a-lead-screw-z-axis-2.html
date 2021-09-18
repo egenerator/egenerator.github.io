@@ -1,191 +1,274 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset=UTF-8"UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="format-detection" content="telephone=no" />
-		<!--icon-->
 
-		<link rel="shortcut icon" href="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/icon.ico" type="image/x-icon" />
-		<link rel="icon" href="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/icon.ico" type="image/x-icon" />
-		<!--icon-->
-  
-  		<title>松开RepRap 3D打印机中的螺纹杆并升级到导螺杆z轴 - 浙江文信机电制造有限公司</title>
-<meta name="description" content="提供3D可打印文件和详细的演练，用于使用导螺杆升级Prusa i3 RepRap 3D打印机的Z轴。这不是第一次，当然也不是最后一次，似乎应该为无生命的杆赢得一阵掌声。许多廉价而欢快的DIY 3D打印机，如Prusa i3和其他RepRap机器，都使用螺纹杆作为z轴。螺纹杆是一种廉价的设备，但许多用户 - 包括丹尼尔 - 在使用椭圆形金属片时遇到了无法解决的问题。使用螺纹杆作为3D打印机的z轴是许多预算机器的标准，但是值得注意的问题包括间隙和摆动，这可以通过使用导螺杆来消除。毕竟，螺纹杆不能用作精确定位工具。它可以随时固定并保持静止。螺纹杆通常可以稍微弯曲，并且它们很快变脏。 “经过一年的印刷..." />
-<meta name="keywords" content="提供3D可打印文件和详细的演练，用于使用导螺杆升" />
-<link rel='dns-prefetch' href='//s.w.org' />
-		<script type="text/javascript">
-			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/cn.power-sprayer.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
-			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
-		</script>
-		<style type="text/css">
-img.wp-smiley,
-img.emoji {
-	display: inline !important;
-	border: none !important;
-	box-shadow: none !important;
-	height: 1em !important;
-	width: 1em !important;
-	margin: 0 .07em !important;
-	vertical-align: -0.1em !important;
-	background: none !important;
-	padding: 0 !important;
-}
-</style>
-<link rel='stylesheet' id='contact-form-7-css'  href="../wp-content/plugins/contact-form-7/includes/css/styles.css-ver=5.1.3.css" tppabs="http://cn.power-sprayer.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3" type='text/css' media='all' />
-<link rel='stylesheet' id='wp-ulike-css'  href="../wp-content/plugins/wp-ulike/assets/css/wp-ulike.min.css-ver=3.6.2.css" tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-ulike/assets/css/wp-ulike.min.css?ver=3.6.2" type='text/css' media='all' />
-<link rel='stylesheet' id='pretty-photo-css'  href="../wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/prettyPhoto.css-ver=1.1.4.css" tppabs="http://cn.power-sprayer.com/wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/prettyPhoto.css?ver=1.1.4" type='text/css' media='screen' />
-<link rel='stylesheet' id='jquery.lightbox.min.css-css'  href="../wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css-ver=1.4.8.css" tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.8" type='text/css' media='all' />
-<script type='text/javascript' src="../wp-includes/js/jquery/jquery.js-ver=1.12.4" tppabs="http://cn.power-sprayer.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
-<script type='text/javascript' src="../wp-includes/js/jquery/jquery-migrate.min.js-ver=1.4.1" tppabs="http://cn.power-sprayer.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
-<link rel='https://api.w.org/' href='http://cn.power-sprayer.com/wp-json/' />
-<link rel='prev' title='附件' href='http://cn.power-sprayer.com/product/accessory/accessory-5.html' />
-<link rel='next' title='企业门' href='http://cn.power-sprayer.com/factory/enterprises-door.html' />
-<link rel="canonical" href="http://cn.power-sprayer.com/news/ditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html" />
-<link rel='shortlink' href='http://cn.power-sprayer.com/?p=2509' />
-<link rel="alternate" type="application/json+oembed" href="http://cn.power-sprayer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcn.power-sprayer.com%2Fnews%2Fditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html" />
-<link rel="alternate" type="text/xml+oembed" href="http://cn.power-sprayer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcn.power-sprayer.com%2Fnews%2Fditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html&#038;format=xml" />
-		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-		         
-		<link rel="stylesheet" type="text/css" href="../wp-content/themes/wenxinjidian-cn-m/css/bootstrap.min.css" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/bootstrap.min.css" />
-		<link rel="stylesheet" type="text/css" href="../wp-content/themes/wenxinjidian-cn-m/css/main.css" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/main.css">
-		<link rel="stylesheet" href="../wp-content/themes/wenxinjidian-cn-m/css/font-awesome.min.css" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/font-awesome.min.css" />
-		<link rel="stylesheet" href="../wp-content/themes/wenxinjidian-cn-m/css/animate.css" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/animate.css" />
-		<script type="text/javascript" src="../../cdn.bootcss.com/jquery-easing/1.3.2/jquery.easing.min.js" tppabs="http://cdn.bootcss.com/jquery-easing/1.3.2/jquery.easing.min.js"></script>
-		<!--[if lt IE 9]>
+<head>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="telephone=no" />
+	<!--icon-->
+
+	<link rel="shortcut icon" href="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/icon.ico"
+		type="image/x-icon" />
+	<link rel="icon" href="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/icon.ico"
+		type="image/x-icon" />
+	<!--icon-->
+
+	<title>松开RepRap 3D打印机中的螺纹杆并升级到导螺杆z轴 - 浙江绿力机械股份有限公司</title>
+	<meta name="description"
+		content="提供3D可打印文件和详细的演练，用于使用导螺杆升级Prusa i3 RepRap 3D打印机的Z轴。这不是第一次，当然也不是最后一次，似乎应该为无生命的杆赢得一阵掌声。许多廉价而欢快的DIY 3D打印机，如Prusa i3和其他RepRap机器，都使用螺纹杆作为z轴。螺纹杆是一种廉价的设备，但许多用户 - 包括丹尼尔 - 在使用椭圆形金属片时遇到了无法解决的问题。使用螺纹杆作为3D打印机的z轴是许多预算机器的标准，但是值得注意的问题包括间隙和摆动，这可以通过使用导螺杆来消除。毕竟，螺纹杆不能用作精确定位工具。它可以随时固定并保持静止。螺纹杆通常可以稍微弯曲，并且它们很快变脏。 “经过一年的印刷..." />
+	<meta name="keywords" content="提供3D可打印文件和详细的演练，用于使用导螺杆升" />
+	<link rel='dns-prefetch' href='//s.w.org' />
+	<script type="text/javascript">
+		window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/cn.power-sprayer.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8" } };
+		!function (a, b, c) { function d(a, b) { var c = String.fromCharCode; l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0); var d = k.toDataURL(); l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0); var e = k.toDataURL(); return d === e } function e(a) { var b; if (!l || !l.fillText) return !1; switch (l.textBaseline = "top", l.font = "600 32px Arial", a) { case "flag": return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b); case "emoji": return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b }return !1 } function f(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d"); for (j = Array("flag", "emoji"), c.supports = { everything: !0, everythingExceptFlag: !0 }, i = 0; i < j.length; i++)c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (h = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji))) }(window, document, window._wpemojiSettings);
+	</script>
+	<style type="text/css">
+		img.wp-smiley,
+		img.emoji {
+			display: inline !important;
+			border: none !important;
+			box-shadow: none !important;
+			height: 1em !important;
+			width: 1em !important;
+			margin: 0 .07em !important;
+			vertical-align: -0.1em !important;
+			background: none !important;
+			padding: 0 !important;
+		}
+	</style>
+	<link rel='stylesheet' id='contact-form-7-css'
+		href="../wp-content/plugins/contact-form-7/includes/css/styles.css-ver=5.1.3.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.1.3"
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='wp-ulike-css'
+		href="../wp-content/plugins/wp-ulike/assets/css/wp-ulike.min.css-ver=3.6.2.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-ulike/assets/css/wp-ulike.min.css?ver=3.6.2"
+		type='text/css' media='all' />
+	<link rel='stylesheet' id='pretty-photo-css'
+		href="../wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/prettyPhoto.css-ver=1.1.4.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/prettyPhoto.css?ver=1.1.4"
+		type='text/css' media='screen' />
+	<link rel='stylesheet' id='jquery.lightbox.min.css-css'
+		href="../wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css-ver=1.4.8.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/styles/lightbox.min.css?ver=1.4.8"
+		type='text/css' media='all' />
+	<script type='text/javascript' src="../wp-includes/js/jquery/jquery.js-ver=1.12.4"
+		tppabs="http://cn.power-sprayer.com/wp-includes/js/jquery/jquery.js?ver=1.12.4"></script>
+	<script type='text/javascript' src="../wp-includes/js/jquery/jquery-migrate.min.js-ver=1.4.1"
+		tppabs="http://cn.power-sprayer.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+	<link rel='https://api.w.org/' href='http://cn.power-sprayer.com/wp-json/' />
+	<link rel='prev' title='附件' href='http://cn.power-sprayer.com/product/accessory/accessory-5.html' />
+	<link rel='next' title='企业门' href='http://cn.power-sprayer.com/factory/enterprises-door.html' />
+	<link rel="canonical"
+		href="http://cn.power-sprayer.com/news/ditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html" />
+	<link rel='shortlink' href='http://cn.power-sprayer.com/?p=2509' />
+	<link rel="alternate" type="application/json+oembed"
+		href="http://cn.power-sprayer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcn.power-sprayer.com%2Fnews%2Fditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html" />
+	<link rel="alternate" type="text/xml+oembed"
+		href="http://cn.power-sprayer.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fcn.power-sprayer.com%2Fnews%2Fditch-the-threaded-rod-in-your-reprap-3d-printer-and-upgrade-to-a-lead-screw-z-axis-2.html&#038;format=xml" />
+	<style type="text/css">
+		.recentcomments a {
+			display: inline !important;
+			padding: 0 !important;
+			margin: 0 !important;
+		}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="../wp-content/themes/wenxinjidian-cn-m/css/bootstrap.min.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../wp-content/themes/wenxinjidian-cn-m/css/main.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/main.css">
+	<link rel="stylesheet" href="../wp-content/themes/wenxinjidian-cn-m/css/font-awesome.min.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="../wp-content/themes/wenxinjidian-cn-m/css/animate.css"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/css/animate.css" />
+	<script type="text/javascript" src="../../cdn.bootcss.com/jquery-easing/1.3.2/jquery.easing.min.js"
+		tppabs="http://cdn.bootcss.com/jquery-easing/1.3.2/jquery.easing.min.js"></script>
+	<!--[if lt IE 9]>
 			<script type="text/javascript" src="../wp-content/themes/wenxinjidian-cn-m/js/html5.js" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/js/html5.js"></script>
 		<![endif]-->
 
-	</head>
-<body><!--===================== HEAD =====================-->
-		<div id="header" class="clearfix">
-			<div class="side-box fl">
-				<div class="side-btn">
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-				<div class="side-menu">
-					<i class="side-close"></i>
-					<ul class="list">
-						<li><a href="../index.htm" tppabs="http://cn.power-sprayer.com/">首页</a></li>
-						<li class="hassub">
-							<a href="#">关于我们</a>
-							<dl>
-								   
-   <dd><a href="../about/company-profile.html" tppabs="http://cn.power-sprayer.com/about/company-profile.html">公司简介</a></dd>
-   
-   <dd><a href="../about/corporate-culture.html" tppabs="http://cn.power-sprayer.com/about/corporate-culture.html">企业文化</a></dd>
-<dd><a href="../factory/index.htm" tppabs="http://cn.power-sprayer.com/factory/">厂房设备</a></dd>
-<dd><a href="../honor/index.htm" tppabs="http://cn.power-sprayer.com/honor/">荣誉资质</a></dd>
-							</dl>
-						</li>
-						<li class="hassub">
-<a href="#">产品中心</a>
-<dl>
-<dd><a href="../product/engine-generator-series/index.htm" tppabs="http://cn.power-sprayer.com/product/engine-generator-series/">发动机和发电机系列</a></dd><dd><a href="../product/garden-equipment-series/index.htm" tppabs="http://cn.power-sprayer.com/product/garden-equipment-series/">园林设备系列</a></dd><dd><a href="../product/agriculture-equipment-series/index.htm" tppabs="http://cn.power-sprayer.com/product/agriculture-equipment-series/">农业设备系列</a></dd><dd><a href="../product/cleaning-equipment-series/index.htm" tppabs="http://cn.power-sprayer.com/product/cleaning-equipment-series/">清洁设备系列</a></dd><dd><a href="../product/motors/index.htm" tppabs="http://cn.power-sprayer.com/product/motors/">马达</a></dd><dd><a href="../product/accessory/index.htm" tppabs="http://cn.power-sprayer.com/product/accessory/">附件</a></dd></dl>
-</li>
-						<li class="hassub">
-<a href="#">新闻中心</a>
-<dl>
-<dd><a href="company-news/index.htm" tppabs="http://cn.power-sprayer.com/news/company-news/">公司新闻</a></dd><dd><a href="industry-news/index.htm" tppabs="http://cn.power-sprayer.com/news/industry-news/">行业新闻</a></dd></dl>
-</li>
-						<li><a href="../contact/index.htm" tppabs="http://cn.power-sprayer.com/contact/">联系我们</a></li>
-						<li class="hassub">
-<a href="#">语言</a>
-<dl>
-<dd><a href="javascript:if(confirm('http://www.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.power-sprayer.com/'" tppabs="http://www.power-sprayer.com/">English</a></dd>
-<dd><a href="../index.htm" tppabs="http://cn.power-sprayer.com/">简体中文</a></dd>
-<dd><a href="javascript:if(confirm('http://ru.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ru.power-sprayer.com/'" tppabs="http://ru.power-sprayer.com/">русский</a></dd>
-<dd><a href="javascript:if(confirm('http://es.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://es.power-sprayer.com/'" tppabs="http://es.power-sprayer.com/">Español</a></dd>
-<dd><a href="javascript:if(confirm('http://sa.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sa.power-sprayer.com/'" tppabs="http://sa.power-sprayer.com/">العربية</a></dd>
-</dl>
-</li>
-					</ul>
-					<div class="side-social clearfix">
-						<div class="fl">
-							<a href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)" class="fa fa-facebook"></a>
-							<a href="javascript:window.open('http://twitter.com/home?status='+encodeURIComponent(document.location.href)+' '+encodeURIComponent(document.title),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)" class="fa fa-twitter"></a>
-							<a href="javascript:window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)+'&source='+encodeURIComponent(document.location.href),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)" class="fa fa-linkedin"></a>
-						</div>
-						<div class="fr"><i class="fa fa-phone"></i><a href="tel:0086-13806577176">0086-13806577176</a></div>
-					</div>
-					<a href="mailto:cnwenxin@power-sprayer.com" class="side-email"><i class="fa fa-envelope"></i>cnwenxin@power-sprayer.com</a>
-				</div>
+</head>
+
+<body>
+	<!--===================== HEAD =====================-->
+	<div id="header" class="clearfix">
+		<div class="side-box fl">
+			<div class="side-btn">
+				<span></span>
+				<span></span>
+				<span></span>
 			</div>
-			<div class="h-search fr"><i class="fa fa-search"></i></div>
-			<div class="search-box">
-				<form method="get" action="http://cn.power-sprayer.com/">
-					<input type="text" placeholder="产品搜索..." name="s" required="required" id="s" value="" />
-					<input type="hidden" name="cat" value="3" />
-					<input type="submit" value="" />
-				</form>
-				<i class="close"></i>
-			</div>
-			<div class="logo"><a href="../index.htm" tppabs="http://cn.power-sprayer.com/"><img src="../wp-content/themes/wenxinjidian-cn-m/images/logo.png" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/logo.png" alt="" /></a></div>
-		</div>
-		<div class="clear"></div>
-		<script type="text/javascript" src="../wp-content/themes/wenxinjidian-cn-m/js/head_js.js" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/js/head_js.js"></script><!--===================== MAIN CONTENT =====================-->
-		<div class="inner-page newdet-page">
-			<h1 class="inner-tit">新闻中心</h1>
-			<div class="con">
-				<h2 class="tit">松开RepRap 3D打印机中的螺纹杆并升级到导螺杆z轴</h2>	
-				<i class="date">2019-06-24</i>
-				<div class="intro">
-					<p>提供3D可打印文件和详细的演练，用于使用导螺杆升级Prusa i3 RepRap 3D打印机的Z轴。</p>
-<p>这不是第一次，当然也不是最后一次，似乎应该为无生命的杆赢得一阵掌声。许多廉价而欢快的DIY 3D打印机，如Prusa i3和其他RepRap机器，都使用螺纹杆作为z轴。螺纹杆是一种廉价的设备，但许多用户 - 包括丹尼尔 - 在使用椭圆形金属片时遇到了无法解决的问题。使用螺纹杆作为3D打印机的z轴是许多预算机器的标准，但是值得注意的问题包括间隙和摆动，这可以通过使用导螺杆来消除。</p>
-<p>毕竟，螺纹杆不能用作精确定位工具。它可以随时固定并保持静止。螺纹杆通常可以稍微弯曲，并且它们很快变脏。 “经过一年的印刷，可以清楚地看到螺纹杆不适用于这种应用，”丹尼尔在他的博客文章中解释道。 “棒......在运动过程中大声吱吱作响，它的线上充满了黑色的粘性物质，包括灰尘，油和金属屑与螺母的摩擦力。”</p>
-<p>为了提高他的Prusa i3 3D打印机的性能，“导螺杆更加坚固，非常坚硬，因此不会弯曲，表面非常光滑，其形状专门设计用于在螺母内移动。”</p>
-<p>为了便于升级，必须更换其3D打印机上的所有z轴安装座。他在PLA中设计并3D打印这些新件，在200°C的0.2mm层高度。他所有的3D打印部件都可以在项目的Thingiverse页面上免费下载。</p>
-<p>升级的z轴消除了螺杆产生的吱吱声和摆动。但升级是否值得？螺纹杆主张和螺杆支撑件之间的争论可以追溯到几年前。通常，不起眼的螺纹杆的防护装置认为导螺杆的成本超过了所提供的小改进，并且螺纹杆的适当维护可以导致类似的高性能。导螺杆支撑件通常表明其首选设备的精度和精度都有所提高。你在哪里站在永恒的辩论中？</p>
-		<div class="wpulike wpulike-default " ><div class="wp_ulike_general_class wp_ulike_is_unliked"><button type="button"
-					data-ulike-id="2509"
-					data-ulike-nonce="6702f71aab"
-					data-ulike-type="likeThis"
-					data-ulike-status="3" class="wp_ulike_btn wp_ulike_put_image wp_likethis_2509"></button><span class="count-box">0</span>			</div></div>
+			<div class="side-menu">
+				<i class="side-close"></i>
+				<ul class="list">
+					<li><a href="../index.htm" tppabs="http://cn.power-sprayer.com/">首页</a></li>
+					<li class="hassub">
+						<a href="#">关于我们</a>
+						<dl>
+
+							<dd><a href="../about/company-profile.html"
+									tppabs="http://cn.power-sprayer.com/about/company-profile.html">公司简介</a></dd>
+
+							<dd><a href="../about/corporate-culture.html"
+									tppabs="http://cn.power-sprayer.com/about/corporate-culture.html">企业文化</a></dd>
+							<dd><a href="../factory/index.htm" tppabs="http://cn.power-sprayer.com/factory/">厂房设备</a>
+							</dd>
+							<dd><a href="../honor/index.htm" tppabs="http://cn.power-sprayer.com/honor/">荣誉资质</a></dd>
+						</dl>
+					</li>
+					<li class="hassub">
+						<a href="#">产品中心</a>
+						<dl>
+							<dd><a href="../product/engine-generator-series/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/engine-generator-series/">发动机和发电机系列</a>
+							</dd>
+							<dd><a href="../product/garden-equipment-series/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/garden-equipment-series/">园林设备系列</a>
+							</dd>
+							<dd><a href="../product/agriculture-equipment-series/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/agriculture-equipment-series/">农业设备系列</a>
+							</dd>
+							<dd><a href="../product/cleaning-equipment-series/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/cleaning-equipment-series/">清洁设备系列</a>
+							</dd>
+							<dd><a href="../product/motors/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/motors/">马达</a></dd>
+							<dd><a href="../product/accessory/index.htm"
+									tppabs="http://cn.power-sprayer.com/product/accessory/">附件</a></dd>
+						</dl>
+					</li>
+					<li class="hassub">
+						<a href="#">新闻中心</a>
+						<dl>
+							<dd><a href="company-news/index.htm"
+									tppabs="http://cn.power-sprayer.com/news/company-news/">公司新闻</a></dd>
+							<dd><a href="industry-news/index.htm"
+									tppabs="http://cn.power-sprayer.com/news/industry-news/">行业新闻</a></dd>
+						</dl>
+					</li>
+					<li><a href="../contact/index.htm" tppabs="http://cn.power-sprayer.com/contact/">联系我们</a></li>
+					<li class="hassub">
+						<a href="#">语言</a>
+						<dl>
+							<dd><a href="javascript:if(confirm('http://www.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://www.power-sprayer.com/'"
+									tppabs="http://www.power-sprayer.com/">English</a></dd>
+							<dd><a href="../index.htm" tppabs="http://cn.power-sprayer.com/">简体中文</a></dd>
+							<dd><a href="javascript:if(confirm('http://ru.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://ru.power-sprayer.com/'"
+									tppabs="http://ru.power-sprayer.com/">русский</a></dd>
+							<dd><a href="javascript:if(confirm('http://es.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://es.power-sprayer.com/'"
+									tppabs="http://es.power-sprayer.com/">Español</a></dd>
+							<dd><a href="javascript:if(confirm('http://sa.power-sprayer.com/  \n\n���ļ��޷��� Teleport Ultra ����, ��Ϊ ����һ�����·���ⲿ������Ϊ������ʼ��ַ�ĵ�ַ��  \n\n�����ڷ������ϴ���?'))window.location='http://sa.power-sprayer.com/'"
+									tppabs="http://sa.power-sprayer.com/">العربية</a></dd>
+						</dl>
+					</li>
+				</ul>
+				<div class="side-social clearfix">
+					<div class="fl">
+						<a href="javascript:window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(document.location.href)+'&amp;t='+encodeURIComponent(document.title),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)"
+							class="fa fa-facebook"></a>
+						<a href="javascript:window.open('http://twitter.com/home?status='+encodeURIComponent(document.location.href)+' '+encodeURIComponent(document.title),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)"
+							class="fa fa-twitter"></a>
+						<a href="javascript:window.open('http://www.linkedin.com/shareArticle?mini=true&url='+encodeURIComponent(document.location.href)+'&title='+encodeURIComponent(document.title)+'&source='+encodeURIComponent(document.location.href),'_blank','toolbar=yes, location=yes, directories=no, status=no, menubar=yes, scrollbars=yes, resizable=no, copyhistory=yes, width=600, height=450,top=100,left=350');void(0)"
+							class="fa fa-linkedin"></a>
 					</div>
-				<div class="fy-box clearfix">
-									</div>
+					<div class="fr"><i class="fa fa-phone"></i><a href="tel:0086-13806577176">0086-13806577176</a></div>
+				</div>
+				<a href="mailto:cnwenxin@power-sprayer.com" class="side-email"><i
+						class="fa fa-envelope"></i>cnwenxin@power-sprayer.com</a>
 			</div>
 		</div>
-		<!--/.wrapper-->
-		<!--===================== FOOTER =====================-->
-		<div id="footer">
-			<div class="f-top">
-				<p>有任何问题或想法？</p>
-				<a href="mailto:cnwenxin@power-spyer.com"><i class="fa fa-envelope"></i>cnwenxin@power-spyer.com</a>
-			</div>	
-			<div class="f-bottom">
-				<p>
-					 版权所有：浙江文信机电制造有限公司 
-					<br/>技术支持：浙江华企
+		<div class="h-search fr"><i class="fa fa-search"></i></div>
+		<div class="search-box">
+			<form method="get" action="http://cn.power-sprayer.com/">
+				<input type="text" placeholder="产品搜索..." name="s" required="required" id="s" value="" />
+				<input type="hidden" name="cat" value="3" />
+				<input type="submit" value="" />
+			</form>
+			<i class="close"></i>
+		</div>
+		<div class="logo"><a href="../index.htm" tppabs="http://cn.power-sprayer.com/"><img
+					src="../wp-content/themes/wenxinjidian-cn-m/images/logo.png"
+					tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/images/logo.png"
+					alt="" /></a></div>
+	</div>
+	<div class="clear"></div>
+	<script type="text/javascript" src="../wp-content/themes/wenxinjidian-cn-m/js/head_js.js"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/js/head_js.js"></script>
+	<!--===================== MAIN CONTENT =====================-->
+	<div class="inner-page newdet-page">
+		<h1 class="inner-tit">新闻中心</h1>
+		<div class="con">
+			<h2 class="tit">松开RepRap 3D打印机中的螺纹杆并升级到导螺杆z轴</h2>
+			<i class="date">2019-06-24</i>
+			<div class="intro">
+				<p>提供3D可打印文件和详细的演练，用于使用导螺杆升级Prusa i3 RepRap 3D打印机的Z轴。</p>
+				<p>这不是第一次，当然也不是最后一次，似乎应该为无生命的杆赢得一阵掌声。许多廉价而欢快的DIY 3D打印机，如Prusa i3和其他RepRap机器，都使用螺纹杆作为z轴。螺纹杆是一种廉价的设备，但许多用户
+					- 包括丹尼尔 - 在使用椭圆形金属片时遇到了无法解决的问题。使用螺纹杆作为3D打印机的z轴是许多预算机器的标准，但是值得注意的问题包括间隙和摆动，这可以通过使用导螺杆来消除。</p>
+				<p>毕竟，螺纹杆不能用作精确定位工具。它可以随时固定并保持静止。螺纹杆通常可以稍微弯曲，并且它们很快变脏。 “经过一年的印刷，可以清楚地看到螺纹杆不适用于这种应用，”丹尼尔在他的博客文章中解释道。
+					“棒......在运动过程中大声吱吱作响，它的线上充满了黑色的粘性物质，包括灰尘，油和金属屑与螺母的摩擦力。”</p>
+				<p>为了提高他的Prusa i3 3D打印机的性能，“导螺杆更加坚固，非常坚硬，因此不会弯曲，表面非常光滑，其形状专门设计用于在螺母内移动。”</p>
+				<p>为了便于升级，必须更换其3D打印机上的所有z轴安装座。他在PLA中设计并3D打印这些新件，在200°C的0.2mm层高度。他所有的3D打印部件都可以在项目的Thingiverse页面上免费下载。</p>
+				<p>升级的z轴消除了螺杆产生的吱吱声和摆动。但升级是否值得？螺纹杆主张和螺杆支撑件之间的争论可以追溯到几年前。通常，不起眼的螺纹杆的防护装置认为导螺杆的成本超过了所提供的小改进，并且螺纹杆的适当维护可以导致类似的高性能。导螺杆支撑件通常表明其首选设备的精度和精度都有所提高。你在哪里站在永恒的辩论中？
 				</p>
+				<div class="wpulike wpulike-default ">
+					<div class="wp_ulike_general_class wp_ulike_is_unliked"><button type="button" data-ulike-id="2509"
+							data-ulike-nonce="6702f71aab" data-ulike-type="likeThis" data-ulike-status="3"
+							class="wp_ulike_btn wp_ulike_put_image wp_likethis_2509"></button><span
+							class="count-box">0</span> </div>
+				</div>
+			</div>
+			<div class="fy-box clearfix">
 			</div>
 		</div>
-		<!--===================== SCRIPT =====================-->
-		<script type="text/javascript" src="../wp-content/themes/wenxinjidian-cn-m/js/bootstrap.min.js" tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/js/bootstrap.min.js"></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wpcf7 = {"apiSettings":{"root":"http:\/\/cn.power-sprayer.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};
+	</div>
+	<!--/.wrapper-->
+	<!--===================== FOOTER =====================-->
+	<div id="footer">
+		<div class="f-top">
+			<p>有任何问题或想法？</p>
+			<a href="mailto:cnwenxin@power-spyer.com"><i class="fa fa-envelope"></i>cnwenxin@power-spyer.com</a>
+		</div>
+		<div class="f-bottom">
+			<p>
+				版权所有：浙江绿力机械股份有限公司
+				<br />技术支持：浙江华企
+			</p>
+		</div>
+	</div>
+	<!--===================== SCRIPT =====================-->
+	<script type="text/javascript" src="../wp-content/themes/wenxinjidian-cn-m/js/bootstrap.min.js"
+		tppabs="http://cn.power-sprayer.com/wp-content/themes/wenxinjidian-cn-m/js/bootstrap.min.js"></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var wpcf7 = { "apiSettings": { "root": "http:\/\/cn.power-sprayer.com\/wp-json\/contact-form-7\/v1", "namespace": "contact-form-7\/v1" } };
 /* ]]> */
-</script>
-<script type='text/javascript' src="../wp-content/plugins/contact-form-7/includes/js/scripts.js-ver=5.1.3" tppabs="http://cn.power-sprayer.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3"></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var wp_ulike_params = {"ajax_url":"http:\/\/cn.power-sprayer.com\/wp-admin\/admin-ajax.php","notifications":"1"};
+	</script>
+	<script type='text/javascript' src="../wp-content/plugins/contact-form-7/includes/js/scripts.js-ver=5.1.3"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.1.3"></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var wp_ulike_params = { "ajax_url": "http:\/\/cn.power-sprayer.com\/wp-admin\/admin-ajax.php", "notifications": "1" };
 /* ]]> */
-</script>
-<script type='text/javascript' src="../wp-content/plugins/wp-ulike/assets/js/wp-ulike.min.js-ver=3.6.2" tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-ulike/assets/js/wp-ulike.min.js?ver=3.6.2"></script>
-<script type='text/javascript' src="../wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/jquery.prettyPhoto.js-ver=1.1.4" tppabs="http://cn.power-sprayer.com/wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/jquery.prettyPhoto.js?ver=1.1.4"></script>
-<script type='text/javascript' src="../wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js-ver=1.4.8" tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.8"></script>
-<script type='text/javascript'>
-/* <![CDATA[ */
-var JQLBSettings = {"showTitle":"1","showCaption":"1","showNumbers":"1","fitToScreen":"0","resizeSpeed":"400","showDownload":"0","navbarOnTop":"0","marginSize":"0","slideshowSpeed":"4000","prevLinkTitle":"previous image","nextLinkTitle":"next image","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","pause":"(pause slideshow)","play":"(play slideshow)"};
+	</script>
+	<script type='text/javascript' src="../wp-content/plugins/wp-ulike/assets/js/wp-ulike.min.js-ver=3.6.2"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-ulike/assets/js/wp-ulike.min.js?ver=3.6.2"></script>
+	<script type='text/javascript'
+		src="../wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/jquery.prettyPhoto.js-ver=1.1.4"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/easy-image-gallery/includes/lib/prettyphoto/jquery.prettyPhoto.js?ver=1.1.4"></script>
+	<script type='text/javascript' src="../wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js-ver=1.4.8"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/jquery.touchwipe.min.js?ver=1.4.8"></script>
+	<script type='text/javascript'>
+		/* <![CDATA[ */
+		var JQLBSettings = { "showTitle": "1", "showCaption": "1", "showNumbers": "1", "fitToScreen": "0", "resizeSpeed": "400", "showDownload": "0", "navbarOnTop": "0", "marginSize": "0", "slideshowSpeed": "4000", "prevLinkTitle": "previous image", "nextLinkTitle": "next image", "closeTitle": "close image gallery", "image": "Image ", "of": " of ", "download": "Download", "pause": "(pause slideshow)", "play": "(play slideshow)" };
 /* ]]> */
-</script>
-<script type='text/javascript' src="../wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js-ver=1.4.8" tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.8"></script>
-<script type='text/javascript' src="../wp-includes/js/wp-embed.min.js-ver=4.9.8" tppabs="http://cn.power-sprayer.com/wp-includes/js/wp-embed.min.js?ver=4.9.8"></script>
-	</body>
+	</script>
+	<script type='text/javascript' src="../wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js-ver=1.4.8"
+		tppabs="http://cn.power-sprayer.com/wp-content/plugins/wp-jquery-lightbox/jquery.lightbox.min.js?ver=1.4.8"></script>
+	<script type='text/javascript' src="../wp-includes/js/wp-embed.min.js-ver=4.9.8"
+		tppabs="http://cn.power-sprayer.com/wp-includes/js/wp-embed.min.js?ver=4.9.8"></script>
+</body>
 
 </html>
