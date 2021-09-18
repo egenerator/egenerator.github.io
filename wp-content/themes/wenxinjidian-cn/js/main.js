@@ -26,7 +26,7 @@ function isMobile() {
 console.log(window.location);
 setTimeout(() => {
     if (isMobile()) { window.location = window.location.origin + '/m' + window.location.pathname }
-}, 4000);
+}, 200);
 $(function () {
 
     //wow.js扩展
