@@ -1,8 +1,7 @@
 ```mermaid
 
 flowchart LR;
-    呼叫服务-.->接受服务
-    显示服务商地点-."<"-.-展示服务商信息#
+    展示服务商信息-."<"-.-服务商信息#
     余额-."<"-.-佣金
 
     展示-.->展示设备信息
@@ -35,8 +34,7 @@ flowchart LR;
             会员
         end
         subgraph 服务
-            显示服务商地点
-            呼叫服务
+            展示服务商信息
         end
     end
         subgraph 设备远程接口
@@ -46,15 +44,14 @@ flowchart LR;
 
 
     subgraph "服务商"
-        subgraph "接受服务"
-        end
-        展示服务商信息#
+        服务商信息#
     end
 
 
 ```
 <!-- subgraph 二期需求
 subgraph 服务商管理
+    呼叫服务-.->接受服务
 end
 subgraph "设备购买"
 end
