@@ -3,7 +3,8 @@ module.exports = {
   trans,
   httpstrans,
 }
-constz=console.log
+// var lastword = ''
+const z = console.log
 // import { MD5 } from './tools'
 const Tools = require('./tools')
 const https = require('https')
@@ -23,7 +24,7 @@ function cross(url, deal = (d) => Tools.Uint8(d), method = 'GET', node) {
     method: method,
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded',
-      // 'Content-Length': data.length
+      // 'Content-Length': 100
     },
   }
   if (node) {
@@ -100,68 +101,67 @@ statusCode: ${res.statusCode}`)
 }
 function dealtrans(d) {
   let baidu = Tools.Uint8(d)
-  let translation = []
+  let translation = {}
   if (baidu.trans_result) {
     baidu.trans_result.forEach((e) => {
-      translation.push(aftertrans(e.dst))
+      translation[e.src] = aftertrans(e.dst)
     })
   } else if (baidu.error_code) {
-    translation.push(Number(baidu.error_code))
+    translation.error_code = Number(baidu.error_code)
     switch (baidu.error_code) {
       case '52000':
-        translation.push('成功;')
+        translation.error_message = '成功;'
         break
       case '52001':
-        translation.push('请求超时; \n请重试')
+        translation.error_message = '请求超时; \n请重试'
         break
       case '52002':
-        translation.push('系统错误; \n请重试')
+        translation.error_message = '系统错误; \n请重试'
         break
       case '52003':
-        translation.push('未授权用户; \n请检查您的appid是否正确，或者服务是否开通')
+        translation.error_message = '未授权用户; \n请检查您的appid是否正确，或者服务是否开通'
         break
       case '54000':
-        translation.push('必填参数为空; \n请检查是否少传参数')
+        translation.error_message = '必填参数为空; \n请检查是否少传参数'
         break
       case '54001':
-        translation.push('签名错误; \n请检查您的签名生成方法')
+        translation.error_message = '签名错误; \n请检查您的签名生成方法'
         break
       case '54003':
-        translation.push('请求过于频繁, 请稍后再试')
+        translation.error_message = '请求过于频繁, 请稍后再试'
         break // '访问频率受限; \n请降低您的调用频率，或进行身份认证后切换为高级版/尊享版'); break;
       case '54004':
-        translation.push('账户余额不足; \n请前往管理控制台为账户充值')
+        translation.error_message = '账户余额不足; \n请前往管理控制台为账户充值'
         break
       case '54005':
-        translation.push('长query请求频繁; \n请降低长query的发送频率，3s后再试')
+        translation.error_message = '长query请求频繁; \n请降低长query的发送频率，3s后再试'
         break
       case '58000':
-        translation.push(
+        translation.error_message =
           '客户端IP非法; \n检查个人资料里填写的IP地址是否正确，可前往开发者信息-基本信息修改，可前往开发者信息-基本信息修改'
-        )
         break
       case '58001':
-        translation.push('译文语言方向不支持; \n请检查译文语言是否在语言列表里')
+        translation.error_message = '译文语言方向不支持; \n请检查译文语言是否在语言列表里'
         break
       case '58002':
-        translation.push('服务当前已关闭; \n请前往管理控制台开启服务')
+        translation.error_message = '服务当前已关闭; \n请前往管理控制台开启服务'
         break
       case '90107':
-        translation.push('认证未通过或未生效; \n请前往我的认证查看认证进度')
+        translation.error_message = '认证未通过或未生效; \n请前往我的认证查看认证进度'
         break
       case '517':
-        translation.push('未知错误')
+        translation.error_message = '未知错误'
         break
       default:
-        translation.push(baidu.error_msg)
+        translation.error_message = baidu.error_msg
         console.log('新错误:', baidu.error_code)
         console.log(baidu.error_msg)
         break
     }
-    translation.push('; \n' + baidu.error_msg)
+    translation.error_message = '; \n' + baidu.error_msg
   } else {
-    translation.push(40000)
-    translation.push(JSON.stringify(baidu))
+    translation.error_message = 40000
+    translation.error_message = JSON.stringify(baidu)
     console.log(baidu)
     try {
       process.stdout.write(d)
