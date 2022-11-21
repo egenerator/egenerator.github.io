@@ -4,7 +4,8 @@ var dict = {}
 const z = console.log
 const config = {}
 const defaultDict = {}
-fs.readFile('./index.htm', 'utf8', function (error, document) {
+const file = './jianggongshi.html'
+fs.readFile(file, 'utf8', function (error, document) {
   if (error) {
     z({ error })
     return
@@ -12,18 +13,20 @@ fs.readFile('./index.htm', 'utf8', function (error, document) {
   ;(document + '').match(/(?=[\u4e00-\u9fa5])[0-9\u4e00-\u9fa5 A-Za-z（），。]+/g).forEach((elem) => {
     dict[elem] = elem
   })
-  z(dict)
+  var keys = Object.keys(dict)
+  keys.sort((a, b) => b.length - a.length)
+  z(keys.length)
   let i = 0
   for (let key in dict) {
     i++
     setTimeout(() => {
       trans.trans(
-        // Object.keys(dict).join('\n')
+        // keys.join('\n')
         key.replace(/_/g, ' '),
         function (params) {
           if (typeof params[0] != 'number') {
             let res = params
-            // Object.keys(dict).forEach(function (tran, i) {
+            // keys.forEach(function (tran, i) {
             //   let key = tran.replace(/ /g, '_')
             if (typeof defaultDict[key] == 'undefined') {
               dict[key] = res[key]
@@ -40,5 +43,17 @@ fs.readFile('./index.htm', 'utf8', function (error, document) {
       )
     }, 1100 * i)
   }
+  setTimeout(() => {
+    z({ dict })
+    for (let key in keys) {
+      document = document.replace(new RegExp(keys[key], 'g'), dict[keys[key]])
+    }
+    //rename file
+    fs.writeFile(file.replace('.htm', '.en.htm'), document, 'utf8', function (error) {
+      if (error) {
+        z({ error })
+        return
+      }
+    })
+  }, keys.length * 1100 + 1000)
 })
-z({ dict })
